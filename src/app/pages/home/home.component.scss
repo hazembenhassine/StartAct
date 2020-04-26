@@ -1,0 +1,31 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.title {
+  font-size: max(2vw, 30px);
+  letter-spacing: 2px;
+}
+
+.header-paragraph {
+  font-family: 'Montserrat', sans-serif;
+  font-size: max(15px, 1.1vw);
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+.header-image {
+  width: 100%;
+}
+
+.col-05 {
+  @include make-col-ready();
+  @include make-col(0.5);
+}
+
+@include media-breakpoint-up(lg) {
+  .offset-lg-05 {
+    @include make-col-ready();
+    @include make-col-offset(0.5);
+  }
+}

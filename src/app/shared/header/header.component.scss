@@ -1,0 +1,21 @@
+.header {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a {
+  border-bottom: solid 2px transparent;
+  transition: border-bottom 0.2s ease-in-out;
+}
+
+a.active {
+  border-bottom: solid 2px #2982c4;
+}

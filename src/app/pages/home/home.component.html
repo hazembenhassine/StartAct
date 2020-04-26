@@ -1,0 +1,97 @@
+<div>
+
+  <app-header></app-header>
+
+  <div class="row justify-content-center">
+    <div class="col-lg-auto d-flex">
+      <div class="my-auto mx-auto">
+        <div class="text-center py-4">
+          <button class="start-btn">
+            APPLY NOW
+          </button>
+        </div>
+        <h2 class="title">
+          Postuler à la {{settings?.edition}}ème édition
+          <br>
+          du programme
+          <br>
+          Strat’Act
+        </h2>
+        <p class="header-paragraph">
+          Start'Act Business Accelerator assistera et <br>
+          soutiendra les entrepreneurs tout au long des <br>
+          premières étapes critiques de la commercialisation<br>
+          et du développement.
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <img class="header-image" src="assets/layer-1.jpg" alt="layer">
+    </div>
+  </div>
+
+  <app-initiators></app-initiators>
+
+  <div id="introduction">
+    <div class="row justify-content-center">
+      <div class="col-11 col-lg offset-lg-05 who-are-we d-flex">
+        <div class="my-auto py-5 py-lg-0">
+          <h2 class="section-title pb-2">QUI SOMMES-NOUS ?</h2>
+          <p class="paragraph">
+            Start’Act est un accélérateur de Startups initié par
+            Carthage Business Angels et soutenu par le ministère des
+            finances et par l’agence française de développement.
+          </p>
+          <p class="paragraph">
+            La mission de Start’Act est d’amorcer le lancement de
+            nouvelles startups et l’accélération de leur développement.
+          </p>
+          <p class="paragraph">
+            L’objectif de Start’Act est:
+          </p>
+          <p class="paragraph">
+            Accélérer l’accès au marché et la croissance des Startups
+            innovantes récemment créées.startactarrow Start’Act est un programme d’accélération et d’accompagnement immersif et totalement personnalisé qui comprend : un accès au
+            Business Angels et aux investisseurs, de la formation, une assistance technique de haut niveau, de la mise en relation, de la visibilité ainsi que de l’assistance légale.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6 p-0">
+        <img class="w-100" src="assets/layer-6.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <app-partners></app-partners>
+
+  <div id="process" class="row justify-content-center pb-5">
+    <div class="col-11 col-lg-6 pt-5">
+      <img class="w-100" src="assets/processus-de-start-act.png" alt="processus de start act">
+    </div>
+    <div class="col-11 col-lg-5 pt-5">
+      <h2 class="section-title pb-2">Processus</h2>
+      <p class="paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+      </p>
+    </div>
+  </div>
+
+  <app-kpis></app-kpis>
+
+  <app-startups></app-startups>
+
+  <div id="media">
+    <app-media></app-media>
+  </div>
+
+  <div id="contact">
+    <app-question></app-question>
+  </div>
+
+  <div class="row">
+    <div class="col p-0">
+      <agm-map [latitude]="36.86" [longitude]="10.16" [zoom]="15" style="width: 100%; height: 420px"></agm-map>
+    </div>
+  </div>
+
+</div>

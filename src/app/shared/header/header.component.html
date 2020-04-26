@@ -1,0 +1,25 @@
+<div class="header">
+  <div class="row justify-content-center text-center my-4">
+    <div class="col-auto d-flex">
+      <a [routerLinkActive]="['active']" routerLink="/home" class="my-auto mx-3">START'ACT</a>
+    </div>
+    <div class="col-auto d-flex">
+      <a href="#" (click)="goTo('#process', $event)" class="my-auto mx-3">PROCESSUS</a>
+    </div>
+    <div class="col-auto d-flex">
+      <a href="#" (click)="goTo('#media', $event)" class="my-auto mx-3">MÉDIA</a>
+    </div>
+    <div class="col-3">
+      <img src="assets/logo.png" alt="Start'Act logo">
+    </div>
+    <div class="col-auto d-flex">
+      <a [routerLinkActive]="['active']" routerLink="/accompagnement" class="my-auto mx-3">ACCOMPAGNEMENT</a>
+    </div>
+    <div class="col-auto d-flex">
+      <a [routerLinkActive]="['active']" routerLink="/mentors" class="my-auto mx-3">MENTORS</a>
+    </div>
+    <div class="col-auto d-flex">
+      <a href="#" (click)="goTo('#contact', $event)" class="my-auto mx-3">CONTACT</a>
+    </div>
+  </div>
+</div>

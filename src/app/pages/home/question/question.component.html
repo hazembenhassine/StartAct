@@ -1,0 +1,117 @@
+<div class="position-relative">
+  <div *ngIf="isLoading" class="loading-spinner">
+    <mat-spinner class="mx-auto my-auto"></mat-spinner>
+  </div>
+  <div *ngIf="success" class="message">
+    <div class="row justify-content-center my-auto w-100">
+      <div class="col-10 text-center">
+        <h1>Votre message a été soumis avec succès!</h1>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="failed" class="message">
+    <div class="row justify-content-center my-auto w-100">
+      <div class="col-10 text-center">
+        <h1>Impossible de soumettre votre message. Veuillez réessayer plus tard.</h1>
+      </div>
+      <div class="col-8 text-right py-4">
+        <button (click)="failed = false" class="start-btn px-5">
+          Retour
+        </button>
+      </div>
+    </div>
+  </div>
+  <div [formGroup]="messageForm" class="row justify-content-center py-4">
+    <div class="col-11 col-lg-7 py-5">
+      <h2 class="section-title pb-2">
+        Avez-vous des questions ?<br>
+        un projet ?
+      </h2>
+      <h4 class="section-subtitle">
+        nous sommes à votre disposition
+      </h4>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="w-100">
+            <mat-label>Nom*</mat-label>
+            <input formControlName="lname" matInput type="text" placeholder="Nom">
+            <mat-error *ngIf="form.lname.invalid">Ce champ est requis!</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="w-100">
+            <mat-label>Prénom*</mat-label>
+            <input formControlName="fname" matInput type="text" placeholder="Prénom">
+            <mat-error *ngIf="form.fname.invalid">Ce champ est requis!</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="w-100">
+            <mat-label>E-mail*</mat-label>
+            <input formControlName="email" matInput type="email" placeholder="E-mail">
+            <mat-error *ngIf="form.email.invalid">Veuillez vérifier votre email!</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="w-100">
+            <mat-label>N° téléphone*</mat-label>
+            <input (input)="keepDigits()" formControlName="telephone" matInput type="text" placeholder="N° téléphone">
+            <mat-error *ngIf="form.telephone.invalid">Un numéro de téléphone est composé de 8 chiffres!</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="w-100">
+            <mat-label>Sujet*</mat-label>
+            <input formControlName="subject" matInput type="text" placeholder="Sujet">
+            <mat-error *ngIf="form.subject.invalid">Ce champ est requis!</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="w-100">
+            <mat-label>Écrivez-nous*</mat-label>
+            <textarea formControlName="content"
+                      matInput
+                      cdkTextareaAutosize
+                      cdkAutosizeMinRows="1"
+                      cdkAutosizeMaxRows="5"
+                      placeholder="Message"></textarea>
+            <mat-error *ngIf="form.content.invalid">Ce champ est requis!</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col"></div>
+        <div class="col-auto">
+          <button [disabled]="messageForm.invalid" (click)="sendMessage()" class="start-btn">
+            Envoyer
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-11 col-lg-4 pb-5">
+      <div>
+        <img class="paper-plane" src="assets/paper-plane.png" alt="paper plane">
+      </div>
+      <div class="coordinates">
+        <div class="py-1">
+          Coworking space LEVEL 1:<br>
+          Boulevard Cheikh Zayed, Tunis.
+        </div>
+        <div class="py-1">
+          startactbusinessaccelerator@outlook.fr
+        </div>
+        <div class="py-1">
+          <img class="icon" src="assets/email.svg" alt="email icon">
+          <img class="icon" src="assets/facebook.webp" alt="facebook icon">
+          <img class="icon" src="assets/instagram.png" alt="instagram icon">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
