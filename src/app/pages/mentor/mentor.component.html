@@ -18,7 +18,7 @@
 </div>
 <div *ngIf="!isLoading">
   <div *ngFor="let mentor of mentors, let i = index">
-    <div *ngIf="!i%2" class="d-none d-lg-flex row justify-content-center">
+    <div *ngIf="!(i%2)" class="d-none d-lg-flex row justify-content-center">
       <div class="col-11 col-lg-5 my-4">
         <h3 class="mentor-name">{{ mentor?.name }}</h3>
         <p class="mentor-description">

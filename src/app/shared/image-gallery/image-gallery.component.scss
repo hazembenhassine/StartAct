@@ -1,0 +1,84 @@
+/* Bebas Neue font face */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* Montserrat font face */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+/* Titillium Web font face */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+.card-mat-dialog .mat-dialog-container .close-button {
+  top: 8px;
+  right: 5px;
+}
+
+.close-button {
+  top: 0;
+  right: 0;
+  opacity: 0.6;
+  background: none;
+  border: none;
+  z-index: 1;
+}
+
+.close-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.close-button:focus {
+  outline: none;
+}
+
+.scroll-icon {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 25px !important;
+  font-weight: bold !important;
+}
+
+.scroll-icon:focus {
+  outline: none;
+}
+
+.scroll-icon:hover {
+  cursor: pointer;
+}
+
+.current-image {
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  justify-content: center;
+}
+
+.item {
+  flex: 0 0 auto;
+  width: 15%;
+}
+
+.image-thumbnail {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #282828;
+  border-radius: 1px;
+  border: solid 1px #282828;
+  padding-bottom: 56.25%;
+  opacity: 0.7;
+}
+
+.image-thumbnail:hover {
+  cursor: pointer;
+}
+
+.image-thumbnail.active {
+  opacity: 1;
+}
