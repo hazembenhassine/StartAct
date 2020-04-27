@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {StartupService} from '../../../core/services/startup.service';
+import {Sponsor} from '../../../core/models/sponsor.model';
+import {environment} from '../../../../environments/environment';
 
 @Component({
   selector: 'app-partners',
@@ -7,27 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartnersComponent implements OnInit {
 
-  partners = [
-    {
-      image: 'assets/wiki-copy-2.png'
-    },
-    {
-      image: 'assets/ugfs.jpg'
-    },
-    {
-      image: 'assets/cdc.png'
-    },
-    {
-      image: 'assets/cba-copy-2.png'
-    },
-    {
-      image: 'assets/afd.png'
-    }
-  ];
+  environment = environment.api.backendURL;
 
-  constructor() { }
+  partners: Sponsor[] = [];
+
+  constructor(private api: StartupService) { }
 
   ngOnInit() {
+    this.api.getSponsors().then(({data}) => {
+      this.partners = data;
+    }).catch(() => {
+      console.log('Error');
+    });
   }
 
 }

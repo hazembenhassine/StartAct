@@ -52,4 +52,9 @@ export class StartupService {
       .toPromise().catch(StartupService.handleError);
   }
 
+  getSponsors(): Promise<any> {
+    return this.http.get(`${environment.api.backendURL}api/sponsors/`)
+      .toPromise().catch(StartupService.handleError);
+  }
+
 }
