@@ -174,3 +174,47 @@ h1, h2, h3, h4, h5, h6 {
     margin: auto;
   }
 }
+
+.program-point {
+
+  text-align: center;
+
+  h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #0168a6;
+    font-size: max(2vw, 22px);
+  }
+
+  p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: max(1.27vw, 14px);
+    color: #0168a6;
+    padding: 0;
+    margin: 0;
+  }
+
+}
+
+.circle-image {
+  width: max(7vw, 90px);
+}
+
+.circle-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: max(22px, 2.3vw);
+  color: white;
+}
+
+.detail-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: max(22px, 2.3vw);
+  color: #2b83c4;
+}
+
+.criterea-container {
+  margin-top: -100px;
+}
+
+.orange-title {
+  color: #f49730;
+}
