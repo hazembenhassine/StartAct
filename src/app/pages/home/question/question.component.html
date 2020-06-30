@@ -66,7 +66,12 @@
         <div class="col">
           <mat-form-field class="w-100">
             <mat-label>Sujet*</mat-label>
-            <input formControlName="subject" matInput type="text" placeholder="Sujet">
+            <input matInput type="text" placeholder="Sujet">
+            <mat-select formControlName="subject">
+              <mat-option value="Questions sur le programme">Questions sur le programme</mat-option>
+              <mat-option value="Soumettre une Idée de projet">Soumettre une Idée de projet</mat-option>
+              <mat-option value="Comment participer au programme">Comment participer au programme</mat-option>
+            </mat-select>
             <mat-error *ngIf="form.subject.invalid">Ce champ est requis!</mat-error>
           </mat-form-field>
         </div>
@@ -107,9 +112,12 @@
           startactbusinessaccelerator@outlook.fr
         </div>
         <div class="py-1">
-          <img class="icon" src="assets/email.svg" alt="email icon">
-          <img class="icon" src="assets/facebook.webp" alt="facebook icon">
-          <img class="icon" src="assets/instagram.png" alt="instagram icon">
+          <a href="https://www.facebook.com/StartActBusinessAccelerator/" target="_blank">
+            <img class="icon" src="assets/facebook.webp" alt="facebook icon">
+          </a>
+          <a href="https://www.instagram.com/startact.ba/" target="_blank">
+            <img class="icon" src="assets/instagram.png" alt="instagram icon">
+          </a>
         </div>
       </div>
     </div>

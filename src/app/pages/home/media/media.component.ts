@@ -40,14 +40,16 @@ export class MediaComponent implements OnInit {
 
   ngOnInit() {
     this.api.getAlbums().then(({data}) => {
-      const tab = data as Album[];
-      this.images = tab.map(({cover, title, images}) => {
-        return {
-          thumbImage: environment.api.backendURL + cover,
-          title,
-          images
-        };
-      });
+      if (data && data.length > 0) {
+        const tab = data as Album[];
+        this.images = tab.map(({cover, title, images}) => {
+          return {
+            thumbImage: environment.api.backendURL + cover,
+            title,
+            images
+          };
+        });
+      }
     }).catch(() => {
       console.log('ERROR');
     });

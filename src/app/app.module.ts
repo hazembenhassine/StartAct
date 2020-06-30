@@ -19,6 +19,8 @@ import { AccompagnementComponent } from './pages/accompagnement/accompagnement.c
 import { MentorComponent } from './pages/mentor/mentor.component';
 import {StartupService} from './core/services/startup.service';
 import {AgmCoreModule} from '@agm/core';
+import { ImageGalleryComponent } from './shared/image-gallery/image-gallery.component';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -47,8 +49,13 @@ import {AgmCoreModule} from '@agm/core';
   ],
   providers: [
     StartupService,
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    { provide: MatDialogRef, useValue: {} },
+    { provide: MAT_DIALOG_DATA, useValue: [] },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    ImageGalleryComponent
+  ]
 })
 export class AppModule { }
