@@ -15,23 +15,28 @@ export class MediaComponent implements OnInit {
   images: Array<any> = [
     {
       thumbImage: 'assets/incubation.png',
-      title: 'Incubation'
+      title: 'Incubation',
+      images: []
     },
     {
       thumbImage: 'assets/incubation.png',
-      title: 'Incubation'
+      title: 'Incubation',
+      images: []
     },
     {
       thumbImage: 'assets/incubation.png',
-      title: 'Incubation'
+      title: 'Incubation',
+      images: []
     },
     {
       thumbImage: 'assets/incubation.png',
-      title: 'Incubation'
+      title: 'Incubation',
+      images: []
     },
     {
       thumbImage: 'assets/incubation.png',
-      title: 'Incubation'
+      title: 'Incubation',
+      images: []
     }
   ];
 

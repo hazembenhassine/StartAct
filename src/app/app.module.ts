@@ -49,9 +49,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
   ],
   providers: [
     StartupService,
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
-    { provide: MatDialogRef, useValue: {} },
-    { provide: MAT_DIALOG_DATA, useValue: [] },
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent],
   entryComponents: [
